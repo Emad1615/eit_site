@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.banner {
+  background-image: url("./../public/assets/singlePageTitle.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wraper {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15% 0 5%;
+  text-align: center;
+}
