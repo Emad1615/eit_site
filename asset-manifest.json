@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Emad1615/eit_site.git/static/css/main.5173b75a.css",
+    "main.js": "/Emad1615/eit_site.git/static/js/main.caf1775b.js",
+    "static/media/singlePageTitle.jpg": "/Emad1615/eit_site.git/static/media/singlePageTitle.02afd1b56b74ec93193a.jpg",
+    "index.html": "/Emad1615/eit_site.git/index.html",
+    "main.5173b75a.css.map": "/Emad1615/eit_site.git/static/css/main.5173b75a.css.map",
+    "main.caf1775b.js.map": "/Emad1615/eit_site.git/static/js/main.caf1775b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5173b75a.css",
+    "static/js/main.caf1775b.js"
+  ]
+}
