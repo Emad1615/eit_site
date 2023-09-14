@@ -16,3 +16,17 @@
 body hr {
   color: gainsboro;
 }
+body .nav.nav-tabs .nav-link.active {
+  background-color: #e67316;
+  color: white;
+  font-weight: 500;
+}
+body .nav.nav-tabs .nav-link {
+  color: gray;
+  font-weight: 500;
+}
+body .accordion-button.collapsed {
+  background-color: #f3f4f6;
+  color: gray;
+  font-weight: 500;
+}
