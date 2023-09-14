@@ -9,7 +9,7 @@ export default function Header() {
           <Carousel.Item className="h-screen w-full" key={idx}>
             <img
               className="d-block  h-full w-full object-cover"
-              src={process.env.PUBLIC_URL + data.src}
+              src={process.env.PUBLIC_URL + "/" + data.src}
               alt={`ImageNo-${idx}`}
             />
             <Carousel.Caption

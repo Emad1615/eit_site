@@ -66,7 +66,7 @@ export default function Index() {
             >
               <div>
                 <img
-                  src="assets/Capabilities.jpg"
+                  src={process.env.PUBLIC_URL + "/assets/Capabilities.jpg"}
                   alt="Capabilities"
                   className="d-block  h-full w-full rounded-3xl object-cover"
                 />

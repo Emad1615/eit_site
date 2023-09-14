@@ -3,7 +3,7 @@ export default function Card({ data }) {
     <div className="grid overflow-hidden rounded-xl bg-white shadow-md sm:grid-cols-1 lg:grid-cols-2">
       <div>
         <img
-          src={data.src}
+          src={process.env.PUBLIC_URL + "/" + data.src}
           alt=""
           className="d-block  h-full w-full object-cover"
         />
