@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <>
       <SinglePageTitle title={"CONTACT US"} />
-      <section className=" p-20">
+      <section className="bg-gray-50 p-20">
         <div className="container">
           <SinglePageH header={"keep touch with us"} />
           <form>
