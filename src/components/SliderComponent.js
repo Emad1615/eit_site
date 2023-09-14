@@ -4,7 +4,7 @@ export default function SliderComponent({ data }) {
     <>
       <Carousel data-bs-theme="dark" controls={true}>
         {data.map((data, idx) => (
-          <Carousel.Item className="h-80 w-full" key={idx}>
+          <Carousel.Item className="h-96 w-full" key={idx}>
             <Carousel.Caption
               className="  p-4 "
               style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}
