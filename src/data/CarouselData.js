@@ -15,3 +15,23 @@ export const CRdata = [
     PCaption: " Nulla vitae elit libero, a pharetra augue mollis interdum.",
   },
 ];
+export const STCLRdata = [
+  {
+    src: "/assets/emad.PNG",
+    HCaptuion: "Emad Ismail Mohamed",
+    PCaption:
+      "Nulla vitae elit libero, a pharetra augue mollis interdum. Nulla vitae elit libero, a pharetra augue mollis interdum. Nulla vitae elit libero, a pharetra augue mollis interdum.",
+  },
+  {
+    src: "/assets/emad.PNG",
+    HCaptuion: "Mohamed Ahmed Kassim",
+    PCaption:
+      "Nulla vitae elit libero, a pharetra augue mollis interdum. Nulla vitae elit libero, a pharetra augue mollis interdum. Nulla vitae elit libero, a pharetra augue mollis interdum.",
+  },
+  {
+    src: "/assets/emad.PNG",
+    HCaptuion: "Moahmed Amin",
+    PCaption:
+      " Nulla vitae elit libero, a pharetra augue mollis interdum. Nulla vitae elit libero, a pharetra augue mollis interdum. Nulla vitae elit libero, a pharetra augue mollis interdum.",
+  },
+];

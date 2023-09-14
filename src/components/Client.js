@@ -14,6 +14,7 @@ export default function Client() {
               delayInMilliseconds={300}
             >
               Our Clients
+              <hr />
             </FadeIn>
             <FontAwesome className="text-muted block pt-3" name="circle" />
           </h3>

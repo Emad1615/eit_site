@@ -9,6 +9,9 @@ import { Fragment, useState } from "react";
 import Item from "../components/Item";
 import { FadeIn } from "react-slide-fade-in";
 import Client from "../components/Client";
+import SinglePageH from "../components/SinglePageH";
+import SliderComponent from "../components/SliderComponent";
+import { STCLRdata } from "../data/CarouselData";
 
 export default function Index() {
   const [onHover, setOnHover] = useState(false);
@@ -25,6 +28,7 @@ export default function Index() {
               delayInMilliseconds={300}
             >
               What We Offer
+              <hr />
             </FadeIn>
             <FontAwesome className=" text-muted block pt-3" name="circle" />
           </h3>
@@ -54,6 +58,7 @@ export default function Index() {
               delayInMilliseconds={300}
             >
               Our Capabilities
+              <hr />
             </FadeIn>
             <FontAwesome className="text-muted block pt-3" name="circle" />
           </h3>
@@ -98,6 +103,7 @@ export default function Index() {
               delayInMilliseconds={300}
             >
               Our Team
+              <hr />
             </FadeIn>
             <FontAwesome className="text-muted block pt-3" name="circle" />
           </h3>
@@ -145,6 +151,10 @@ export default function Index() {
         </div>
       </section>
       <Client />
+      <section className="container p-20">
+        <SinglePageH header={"Our Satisfied clients"} />
+        <SliderComponent data={STCLRdata} />
+      </section>
     </>
   );
 }

@@ -5,6 +5,8 @@ import SinglePageH from "../components/SinglePageH";
 import SinglePageTitle from "../components/SinglePageTitle";
 import { FadeIn } from "react-slide-fade-in";
 import PorgressBar from "../components/PorgressBar";
+import SliderComponent from "../components/SliderComponent";
+import { STCLRdata } from "../data/CarouselData";
 
 export default function About() {
   return (
@@ -45,39 +47,41 @@ export default function About() {
           </div>
         </FadeIn>
       </section>
-      <section className="container pb-3">
-        <SinglePageH header={"our professional skills"} />
-        <div className="flex flex-wrap items-start justify-start gap-5 pt-3">
-          <div className="sm:flex-auto lg:flex-1">
-            <h5 className="font-semibold text-gray-500">
-              Completely pontificate timely metrics rather than accurate
-            </h5>
-            <p className=" text-sm text-gray-500">
-              Completely pontificate timely metrics rather than accurate growth
-              strategies. Seamlessly impact premium communities whereas
-              real-time networks. Professionally transform high-payoff
-              collaboration and idea-sharing before resource maximizing supply
-              chains. Energistically evisculate timely manufactured products for
-              resource-leveling ROI. Assertively create client-focused vortals
-              whereas functional potentialities.
-            </p>
-          </div>
-          <div className="w-full sm:flex-auto lg:flex-1 ">
-            <h5 className="text-center font-semibold text-gray-500">
-              Our skills
-            </h5>
-            <div className="border p-3">
-              <PorgressBar title={"Solution"} percentage={80} />
-              <PorgressBar title={"Creativity"} percentage={70} />
-              <PorgressBar title={"Finance"} percentage={60} />
-              <PorgressBar title={"Brand"} percentage={50} />
+      <section className="bg-gray-100 p-20">
+        <div className="container">
+          <SinglePageH header={"our professional skills"} />
+          <div className="flex flex-wrap items-start justify-start gap-5 pt-3">
+            <div className="sm:flex-auto lg:flex-1">
+              <h5 className="font-semibold text-gray-500">
+                Completely pontificate timely metrics rather than accurate
+              </h5>
+              <p className=" text-sm text-gray-500">
+                Completely pontificate timely metrics rather than accurate
+                growth strategies. Seamlessly impact premium communities whereas
+                real-time networks. Professionally transform high-payoff
+                collaboration and idea-sharing before resource maximizing supply
+                chains. Energistically evisculate timely manufactured products
+                for resource-leveling ROI. Assertively create client-focused
+                vortals whereas functional potentialities.
+              </p>
+            </div>
+            <div className="w-full sm:flex-auto lg:flex-1 ">
+              <h5 className="text-center font-semibold text-gray-500">
+                Our skills
+              </h5>
+              <div className="border p-3">
+                <PorgressBar title={"Solution"} percentage={80} />
+                <PorgressBar title={"Creativity"} percentage={70} />
+                <PorgressBar title={"Finance"} percentage={60} />
+                <PorgressBar title={"Brand"} percentage={50} />
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section className="container p-20">
-        <SinglePageH header={"Satisfied Customer"} />
-        <div className="h-1/2"></div>
+        <SinglePageH header={"Our Satisfied clients"} />
+        <SliderComponent data={STCLRdata} />
       </section>
       <Client />
     </>
