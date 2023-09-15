@@ -1,19 +1,60 @@
+import { useState } from "react";
 import Map from "../components/Map";
 import SinglePageH from "../components/SinglePageH";
 import SinglePageTitle from "../components/SinglePageTitle";
 
 export default function Contact() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [country, setCountry] = useState(0);
+  const [city, setCity] = useState("");
+  const [address, setAddress] = useState("");
+  const [about, setAbout] = useState("");
+  function SaveMessage(e) {
+    e.preventDefault();
+    if (
+      firstName == "" ||
+      lastName == "" ||
+      email == "" ||
+      country == 0 ||
+      city == "" ||
+      about == ""
+    ) {
+      alert("Please Insert your data");
+      return false;
+    }
+    const model = {
+      FirstName: firstName,
+      LastName: lastName,
+      Email: email,
+      Country: country,
+      City: city,
+      Address: address,
+      About: about,
+    };
+    console.log(model);
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setCountry(0);
+    setCity("");
+    setAddress("");
+    setAbout("");
+    return true;
+  }
+
   return (
     <>
       <SinglePageTitle title={"CONTACT US"} />
       <section className="bg-gray-50 p-20">
         <div className="container">
           <SinglePageH header={"keep touch with us"} />
-          <form>
+          <form onSubmit={SaveMessage}>
             <div className="space-y-12">
               <div className="border-b border-gray-900/10 pb-12">
                 <h2 className="text-base font-semibold leading-7 text-gray-900">
-                  Personal Information
+                  Client Information
                 </h2>
                 <p className="mt-1 text-sm leading-6 text-gray-600">
                   Use a permanent address where you can receive mail.
@@ -29,6 +70,10 @@ export default function Contact() {
                     </label>
                     <div className="mt-2">
                       <input
+                        value={firstName}
+                        onChange={(e) => {
+                          setFirstName(e.currentTarget.value);
+                        }}
                         type="text"
                         name="first-name"
                         id="first-name"
@@ -47,6 +92,10 @@ export default function Contact() {
                     </label>
                     <div className="mt-2">
                       <input
+                        value={lastName}
+                        onChange={(e) => {
+                          setLastName(e.currentTarget.value);
+                        }}
                         type="text"
                         name="last-name"
                         id="last-name"
@@ -65,9 +114,13 @@ export default function Contact() {
                     </label>
                     <div className="mt-2">
                       <input
+                        value={email}
+                        onChange={(e) => {
+                          setEmail(e.currentTarget.value);
+                        }}
                         id="email"
                         name="email"
-                        type="email"
+                        type="text"
                         autoComplete="email"
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       />
@@ -83,14 +136,21 @@ export default function Contact() {
                     </label>
                     <div className="mt-2">
                       <select
+                        value={country}
+                        onChange={(e) => {
+                          setCountry(parseInt(e.currentTarget.value));
+                        }}
                         id="country"
                         name="country"
                         autoComplete="country-name"
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                       >
-                        <option>United States</option>
-                        <option>Canada</option>
-                        <option>Mexico</option>
+                        <option className="text-center" value={0}>
+                          ---Choose Country---
+                        </option>
+                        <option value={1}>United States</option>
+                        <option value={2}>Canada</option>
+                        <option value={3}>Mexico</option>
                       </select>
                     </div>
                   </div>
@@ -104,6 +164,10 @@ export default function Contact() {
                     </label>
                     <div className="mt-2">
                       <input
+                        value={address}
+                        onChange={(e) => {
+                          setAddress(e.currentTarget.value);
+                        }}
                         type="text"
                         name="street-address"
                         id="street-address"
@@ -122,6 +186,10 @@ export default function Contact() {
                     </label>
                     <div className="mt-2">
                       <input
+                        value={city}
+                        onChange={(e) => {
+                          setCity(e.currentTarget.value);
+                        }}
                         type="text"
                         name="city"
                         id="city"
@@ -139,11 +207,14 @@ export default function Contact() {
                     </label>
                     <div className="mt-2">
                       <textarea
+                        value={about}
+                        onChange={(e) => {
+                          setAbout(e.currentTarget.value);
+                        }}
                         id="about"
                         name="about"
                         rows={3}
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        defaultValue={""}
                       />
                     </div>
                     <p className="mt-3 text-sm leading-6 text-gray-600">
@@ -157,7 +228,7 @@ export default function Contact() {
 
             <div className="mt-6 flex items-center justify-end gap-x-6">
               <button
-                type="button"
+                type="reset"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 Cancel
